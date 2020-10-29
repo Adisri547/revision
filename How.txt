@@ -1,0 +1,221 @@
+
+C:\Users\KIIT>cd Desktop
+
+C:\Users\KIIT\Desktop>cd revision
+
+C:\Users\KIIT\Desktop\revision>git init
+Reinitialized existing Git repository in C:/Users/KIIT/Desktop/revision/.git/
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   co.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\KIIT\Desktop\revision>git add co.c
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   co.c
+
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   co.c
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        wb.docx
+
+
+C:\Users\KIIT\Desktop\revision>git add wb.docx
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   co.c
+        new file:   wb.docx
+
+
+C:\Users\KIIT\Desktop\revision>git commit -m "just added word and c"
+[main f3a7876] just added word and c
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+ create mode 100644 wb.docx
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\KIIT\Desktop\revision>git log
+commit f3a7876ae38f3199041f0b889b0ce845cd2d3deb (HEAD -> main)
+Author: hello <adityasrivastav76@gmail.com>
+Date:   Fri Oct 30 00:03:08 2020 +0530
+
+    just added word and c
+
+commit ceecfcaf0b55736cbc4016f32f004da38f4af19d (origin/main)
+Author: hello <adityasrivastav76@gmail.com>
+Date:   Thu Oct 29 23:44:58 2020 +0530
+
+    first commit
+
+commit 58ceeb28530667d38c8886fb643ecfba6a74efe1
+Author: hello <adityasrivastav76@gmail.com>
+Date:   Thu Oct 29 23:37:28 2020 +0530
+
+    first commit
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   wb.docx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\KIIT\Desktop\revision>git add wb.docx
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   wb.docx
+
+
+C:\Users\KIIT\Desktop\revision>git rm --cached wb.docx
+rm 'wb.docx'
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    wb.docx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        wb.docx
+
+
+C:\Users\KIIT\Desktop\revision>git add wb.docx
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   wb.docx
+
+
+C:\Users\KIIT\Desktop\revision>git commit -m "done"
+[main fe0fad3] done
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\KIIT\Desktop\revision>git branch dev
+
+C:\Users\KIIT\Desktop\revision>git checkout dev
+Switched to branch 'dev'
+
+C:\Users\KIIT\Desktop\revision>git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+C:\Users\KIIT\Desktop\revision>git checkout dev
+Already on 'dev'
+
+C:\Users\KIIT\Desktop\revision>git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+C:\Users\KIIT\Desktop\revision>git checkout revision
+error: pathspec 'revision' did not match any file(s) known to git
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   wb.docx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\KIIT\Desktop\revision>git commit -am wb.docx
+[dev d517f79] wb.docx
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch dev
+nothing to commit, working tree clean
+
+C:\Users\KIIT\Desktop\revision>git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+C:\Users\KIIT\Desktop\revision>git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\KIIT\Desktop\revision>git merge dev
+Updating fe0fad3..d517f79
+Fast-forward
+ wb.docx | Bin 10870 -> 10902 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+C:\Users\KIIT\Desktop\revision>git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\KIIT\Desktop\revision>git remote add origin https://github.com/Adisri547/revision.git
+fatal: remote origin already exists.
+
+C:\Users\KIIT\Desktop\revision>git push -u origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 12.09 KiB | 6.04 MiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/Adisri547/revision.git
+   ceecfca..d517f79  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+C:\Users\KIIT\Desktop\revision>
